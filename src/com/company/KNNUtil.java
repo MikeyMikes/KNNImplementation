@@ -55,12 +55,12 @@ public class KNNUtil {
 
         Scanner scanNumOfLines = new Scanner(file);
 
-        features = new Double[scanNumOfLines.nextLine().split(", ").length - 1][numOfDataPoints];
+        features = new Double[scanNumOfLines.nextLine().split(",").length - 1][numOfDataPoints];
 
         int lineIndex = 0;
         Scanner scanner = new Scanner(file);
         while (scanner.hasNextLine()) {
-            String[] params = scanner.nextLine().split(", ");
+            String[] params = scanner.nextLine().split(",");
 
             for(int i=0; i < params.length - 1; i++) {
                 features[i][lineIndex] = (Double.parseDouble(params[i]));
